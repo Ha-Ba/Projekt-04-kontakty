@@ -9,3 +9,48 @@ body {
 h1 {
 	text-align: center;
 }
+
+.tym {
+display: flex;
+flex-direction: row;
+flex-basis: 100vw;
+grid-column: auto;
+margin: 2vw;
+align-content: space-evenly;
+}
+
+.osoba {
+	display: flex;
+	flex-basis: 25%;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	border: 0.1px solid rgba(128, 128, 128, 0.425);
+	border-radius: 10px;
+	box-shadow: 3px 2px 7px rgba(128, 128, 128, 0.425);
+	padding: 2%;
+
+}
+
+.popis {text-align: center;}
+
+.foto {border-radius: 50%;}
+
+/*-----------------------------------------------------------*/
+
+@media screen and (min-width: 10px) and (max-width:600px) {
+	.tym {
+		display: flex;
+		flex-direction: column;
+		width: calc(100%/1);
+		}
+	}
+
+@media screen and (min-width: 601px) and (max-width: 100%){
+		.tym {
+			display: flex;
+			flex-direction: row;
+			gap: 2%;
+			width: calc(100%/4);
+		}
+	}
