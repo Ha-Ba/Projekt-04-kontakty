@@ -8,49 +8,78 @@ body {
 
 h1 {
 	text-align: center;
+	/*flex: auto;*/
 }
 
 .tym {
 display: flex;
 flex-direction: row;
-flex-basis: 100vw;
+flex-wrap: nowrap;
+flex-basis: calc(98% / 4);
+column-gap: 1vw;
+row-gap: 1vw;
 grid-column: auto;
-margin: 2vw;
 align-content: space-evenly;
 }
 
 .osoba {
 	display: flex;
-	flex-basis: 25%;
+	flex-basis: calc(98% / 4);
+	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
 	border: 0.1px solid rgba(128, 128, 128, 0.425);
 	border-radius: 10px;
 	box-shadow: 3px 2px 7px rgba(128, 128, 128, 0.425);
-	padding: 2%;
-
+	padding: 1vw;
 }
 
-.popis {text-align: center;}
+.popis {text-align: center;
+}
 
 .foto {border-radius: 50%;}
 
+
+
+
 /*-----------------------------------------------------------*/
 
-@media screen and (min-width: 10px) and (max-width:600px) {
-	.tym {
+@media screen and (min-width: 0px) and (max-width:600px) {
+	.osoba {
 		display: flex;
 		flex-direction: column;
-		width: calc(100%/1);
+		width: calc(98% / 4);
+		justify-content: space-evenly;
+		flex-basis: calc(98% / 1);
+		flex-wrap: wrap;
 		}
+
+	.tym {
+		flex-wrap: wrap;
+	}
 	}
 
-@media screen and (min-width: 601px) and (max-width: 100%){
-		.tym {
+@media screen and (min-width: 600px) and (max-width: 1020px) {
+	.osoba {
+		display: flex;
+		flex-direction: row;
+		width: calc(98% / 2);
+		justify-content: space-evenly;
+		flex-basis: calc(98% / 2);
+		}
+
+	.tym {flex-wrap: wrap;}
+	}
+
+@media screen and (min-width: 1020px) and (max-width: 1900px){
+		.osoba {
 			display: flex;
 			flex-direction: row;
-			gap: 2%;
-			width: calc(100%/4);
+			width: calc(98% / 1);
+			justify-content: space-evenly;
 		}
+		.tym {
+			flex-wrap: nowrap;
+			position: relative;}
 	}
