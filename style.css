@@ -14,72 +14,86 @@ h1 {
 .tym {
 display: flex;
 flex-direction: row;
-flex-wrap: nowrap;
+flex-wrap: wrap;
 flex-basis: calc(98% / 4);
-column-gap: 1vw;
-row-gap: 1vw;
+/*column-gap: 1vw;
+row-gap: 1vw;*/
 grid-column: auto;
+grid-row: auto;
 align-content: space-evenly;
+justify-content: center;
 }
 
 .osoba {
 	display: flex;
-	flex-basis: calc(98% / 4);
+	flex-basis: calc(100% - 25px);
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	border: 0.1px solid rgba(128, 128, 128, 0.425);
+	border: 1px solid rgba(128, 128, 128, 0.425);
 	border-radius: 10px;
 	box-shadow: 3px 2px 7px rgba(128, 128, 128, 0.425);
-	padding: 1vw;
+	margin:5px;
+	padding: 5px;
 }
 
-.popis {text-align: center;
+.popis {
+	text-align: center;
 }
 
-.foto {border-radius: 50%;}
+.foto {
+	border-radius: 50%;
+}
+
 
 
 
 
 /*-----------------------------------------------------------*/
 
-@media screen and (min-width: 0px) and (max-width:600px) {
+/*@media screen and (min-width: 0px) and (max-width:540px) {
 	.osoba {
 		display: flex;
 		flex-direction: column;
-		width: calc(98% / 4);
 		justify-content: space-evenly;
-		flex-basis: calc(98% / 1);
+		flex-basis: calc(100% - 25px);
 		flex-wrap: wrap;
 		}
 
 	.tym {
 		flex-wrap: wrap;
 	}
-	}
+	}*/
 
-@media screen and (min-width: 600px) and (max-width: 1020px) {
+@media screen and (min-width: 540px) and (max-width: 960px) {
+
 	.osoba {
 		display: flex;
 		flex-direction: row;
-		width: calc(98% / 2);
-		justify-content: space-evenly;
-		flex-basis: calc(98% / 2);
+		flex-basis: calc(50% - 15px);	
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: wrap;
 		}
 
-	.tym {flex-wrap: wrap;}
+	.tym {
+		display: flex;	
+		flex-wrap: wrap;
+		}
+
+	.popis {
+		text-align: left;
+		padding-left: 10px;
+		}
 	}
 
-@media screen and (min-width: 1020px) and (max-width: 1900px){
-		.osoba {
-			display: flex;
-			flex-direction: row;
-			width: calc(98% / 1);
-			justify-content: space-evenly;
-		}
-		.tym {
-			flex-wrap: nowrap;
-			position: relative;}
+@media screen and (min-width: 960px) and (max-width: 100%){
+	.kontakty {
+		display: flex;
 	}
+	.tym {
+		flex-direction: row;
+	}			
+	}
+
