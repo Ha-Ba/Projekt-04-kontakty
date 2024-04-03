@@ -4,96 +4,123 @@
 body {
 	font-family: sans-serif;
 	font-size: 14px;
+	max-width: 540px;
+	min-width: 200px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 h1 {
 	text-align: center;
-	/*flex: auto;*/
-}
-
-.tym {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-flex-basis: calc(98% / 4);
-/*column-gap: 1vw;
-row-gap: 1vw;*/
-grid-column: auto;
-grid-row: auto;
-align-content: space-evenly;
-justify-content: center;
 }
 
 .osoba {
-	display: flex;
-	flex-basis: calc(100% - 25px);
-	flex-wrap: wrap;
-	flex-direction: column;
-	justify-content: space-evenly;
-	align-items: center;
 	border: 1px solid rgba(128, 128, 128, 0.425);
 	border-radius: 10px;
 	box-shadow: 3px 2px 7px rgba(128, 128, 128, 0.425);
-	margin:5px;
-	padding: 5px;
+	margin: 5px;
+	padding-top: 5px;
+	min-width: 200px;
 }
 
 .popis {
 	text-align: center;
+	padding: 0 5px 5px 5px;
 }
 
 .foto {
 	border-radius: 50%;
+	max-width: 150px;
 }
 
-
-
-
-
+.container-foto {
+	text-align: center;
+}
 /*-----------------------------------------------------------*/
 
-/*@media screen and (min-width: 0px) and (max-width:540px) {
-	.osoba {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		flex-basis: calc(100% - 25px);
-		flex-wrap: wrap;
-		}
-
-	.tym {
-		flex-wrap: wrap;
-	}
-	}*/
-
 @media screen and (min-width: 540px) and (max-width: 960px) {
+	body {
+		font-family: sans-serif;
+		font-size: 14px;
+		min-width: 560px;
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.tym {
+		/*min-width: 540px;
+		max-width: 960px;
+		display: flex;
+		flex-direction: column;*/
+		align-items:stretch;
+		 justify-content: space-evenly;
+		flex-wrap: nowrap;
+	}
 
 	.osoba {
 		display: flex;
 		flex-direction: row;
-		flex-basis: calc(50% - 15px);	
-		justify-content: center;
-		align-items: flex-start;
-		flex-wrap: wrap;
-		}
-
-	.tym {
-		display: flex;	
-		flex-wrap: wrap;
-		}
+		min-width: 255px;
+		max-width: 472.5px;
+		align-items: start;	
+		padding-left: 5px;
+	}
+/*------------*/	
+/*	
+.prvni {
+		grid-area: 1 / 1;
+	}
+	.druha {
+		grid-area: 1 / 2;
+	}
+	.treti {
+		grid-area: 2 / 1;
+	}
+	.ctvrta {
+		grid-area: 2 / 2;
+	}
+	*/
+/*------------*/
+	.container-foto {
+		display: flex;
+		text-align: center;
+		margin-top: auto;
+		margin-bottom: auto;
+		padding: 5px;
+	}
 
 	.popis {
-		text-align: left;
-		padding-left: 10px;
-		}
+		display: flex;
+		flex-direction: column;
+		text-align: justify;
+		padding: 5px;
 	}
+}
 
 @media screen and (min-width: 960px) and (max-width: 100%){
-	.kontakty {
-		display: flex;
-	}
 	.tym {
-		flex-direction: row;
-	}			
+		min-width: 960px;
+		display: flex;
+		justify-content: space-evenly;
 	}
+
+	.osoba {
+		display: flex;
+		max-width: 215px;
+		align-items: start;	
+	}
+	.container-foto {
+		display: flex;
+		text-align: center;
+		/* margin-top: auto;
+		margin-bottom: auto;*/
+		margin: auto;
+		padding: 5px;
+	}
+
+	.popis {
+		text-align: center;
+		padding: 0 5px 5px 5px;
+	}
+}
 
